@@ -37,10 +37,6 @@ def concatenate(folder_path):
         #save the concatenated dataframe to a csv file
     data.to_csv('./data/' +folder_name + '.csv', index=False)
 
-
-import numpy as np
-
-# Define a function to map the elapsed time to the system time
 def map_elapsed_to_system_time(elapsed_time, time_df):
     for i in range(len(time_df) - 1):
         if time_df.loc[i, 'experiment time'] <= elapsed_time < time_df.loc[i + 1, 'experiment time']:
